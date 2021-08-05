@@ -21,10 +21,11 @@ namespace methods
             Console.WriteLine("What is your favorite band?");
             String bandString = Console.ReadLine();
             Console.WriteLine($"{nameString} is your name, {petString} is your pet, {colorString} is your favorite color, and {bandString} is your favorite band.");
-            Console.WriteLine($"{Program.Add(A, B)}");
+            Console.WriteLine($"{Add(A, B)}");
             Console.WriteLine($"{Program.Subtract(C, D)}");
             var sum = Program.Addup(array1);
             Console.WriteLine(sum);
+            Console.WriteLine(Add(1, 2, 3, 4, 5, 6));
             
         }
         public static double Add (double A , double B)
@@ -58,5 +59,17 @@ namespace methods
             }
             return sum;
         }
+        public static int Add(params int[] list)
+        {
+            int sum = 0;
+            for (int i = 0; i < list.Length; i++)
+            {
+                sum += list[i];
+            }
+            return sum;
+        
+        }
+    
+    
     }
 }
